@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Book Demo Class</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="assets/css/book_now.css"/>
+</head>
+<body class="form-v4" id="mainbody" style="background-image: url(assets/img/book-demo-bg.jpg); background-repeat: no-repeat; background-position:fixed ; background-size: cover;">
+	<div class="page-content">
+		<div class="form-v4-content">
+			<form class="form-detail" action="#" method="post" id="myform">
+				<center><h1>BOOK A FREE DEMO CLASS</h1></center><br>
+				<div class="form-group">
+					<div class="form-row">
+						<label for="first_name">Student's First Name<span aria-hidden="true" class="required">*</span></label>
+						<input type="text" name="first_name" id="first_name" placeholder="Enter Student's First Name" class="input-text" required>
+					</div>
+				</div>	
+				<div class="form-group">
+					<div class="form-row">
+						<label for="last_name">Student's Last Name<span aria-hidden="true" class="required">*</span></label>
+						<input type="text" name="last_name" id="last_name" placeholder="Enter Student's Last Name" class="input-text" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="form-row">
+						<label for="company_name">Parent's Name<span aria-hidden="true" class="required">*</span></label>
+						<input type="text" name="company_name" id="company_name" placeholder="Enter Parent's Name" class="input-text" required>
+					</div>
+				</div>	
+				<div class="form-row">
+					<label for="your_phn">Parent's Phone Number<span aria-hidden="true" class="required">*</span></label>
+					<input type="text" name="your_phn" id="your_phn" placeholder="Enter 10 digit phone number (Parent's)" class="input-text" required pattern="[0-9]{10}">
+				</div>
+				<div class="form-row">
+					<label for="your_email">Parent's Email ID<span aria-hidden="true" class="required">*</span></label>
+					<input type="text" name="your_email" id="your_email" placeholder="Enter Parent's Email ID" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+				</div>
+				
+				<!-- <div class="form-row"> -->
+				<div class="form-row col-md-3">
+					<label for="state">State<span aria-hidden="true" class="required">*</span></label>
+					<select class="form-select" name="state" id="state">
+						<option value="">Choose</option>
+						<option value="Andhra Pradesh">Andhra Pradesh</option>
+						<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+						<option value="Assam">Assam</option>
+						<option value="Bihar">Bihar</option>
+						<option value="Chhattisgarh">Chhattisgarh</option>
+						<option value="Goa">Goa</option>
+						<option value="Gujarat">Gujarat</option>
+						<option value="Haryana">Haryana</option>
+						<option value="Himachal Pradesh">Himachal Pradesh</option>
+						<option value="Jammu Kashmir">Jammu and Kashmir</option>
+						<option value="Jharkhand">Jharkhand</option>
+						<option value="Karnataka">Karnataka</option>
+						<option value="Kerala">Kerala</option>
+						<option value="Madhya Pradesh">Madhya Pradesh</option>
+						<option value="Maharashtra">Maharashtra</option>
+						<option value="Manipur">Manipur</option>
+						<option value="Meghalaya">Meghalaya</option>
+						<option value="Mizoram">Mizoram</option>
+						<option value="Nagaland">Nagaland</option>
+						<option value="Odisha">Odisha</option>
+						<option value="Punjab">Punjab</option>
+						<option value="Rajasthan">Rajasthan</option>
+						<option value="Sikkim">Sikkim</option>
+						<option value="Tamil Nadu">Tamil Nadu</option>
+						<option value="Telangana">Telangana</option>
+						<option value="Tripura">Tripura</option>
+						<option value="Uttar Pradesh">Uttar Pradesh</option>
+						<option value="Uttarakhand">Uttarakhand</option>
+						<option value="West Bengal">West Bengal</option>
+					</select>
+						
+				</div><br>
+				<div class="form-radio">
+					
+				</div>
+				<br>
+				<div class="form-checkbox">
+					
+					<label class="container"><p><span aria-hidden="true" class="required-term">*</span>I have read and agree to the Terms and Conditions.</p>
+					  	<input class="checkbox"type="checkbox" name="checkbox" id="checkbox" required>
+					  
+					  	<span class="checkmark" style="top: 2px;"></span>
+					</label>
+				</div>
+				<div class="form-group">
+				 <div class="form-row">
+					<a type="submit" name="register" class="register">Register</a>
+				 </div>
+				</div> 
+				<div class="form-group">
+					<div class="form-row">
+					   <a href="index.html" class="backtohome">Back to Home</a>
+					</div>
+				   </div> 
+
+			</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script>
+		// just for the demos, avoids form submit
+		jQuery.validator.setDefaults({
+		  	debug: true,
+		  	success:  function(label){
+        		label.attr('id', 'valid');
+   		 	},
+		});
+		$( "#myform" ).validate({
+		  	rules: {
+			    password: "required",
+		    	comfirm_password: {
+		      		equalTo: "#password"
+		    	}
+		  	},
+		  	messages: {
+		  		first_name: {
+		  			required: "Please enter your First Name"
+		  		},
+		  		last_name: {
+		  			required: "Please enter your Last Name"
+		  		},
+				company_name: {
+					required: "Please enter your Company Name"
+				},
+				designation: {
+					required: "Please enter your Designation"
+				},
+				domain: {
+					required: "Please enter your Domain Details"
+				},
+		  		your_email: {
+		  			required: "Please provide an email"
+		  		},
+				 your_phn: {
+		  			required: "Please provide a Phone Number"
+		  		},
+				  wp_number: {
+		  			required: "Please provide a WhatsApp Number"
+		  		},
+				  city: {
+		  			required: "Please enter your City"
+		  		},
+				  pincode: {
+		  			required: "Please enter your Pincode"
+		  		},
+				checkbox: {
+	  				required: "Please accept our T&C"
+		  		}
+		  	}
+		});
+	</script>
+</body>
+</html>
