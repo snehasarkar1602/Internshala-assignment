@@ -456,6 +456,16 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+@media(max-width:769px){
+  #hero .search-container input[type=search] {
+    width: 50%;
+  }
+  #hero .search-container input[type=submit]{
+    width: 40%;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
